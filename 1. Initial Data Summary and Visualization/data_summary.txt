@@ -1,0 +1,77 @@
+============================================================
+DEEP DATASET ANALYSIS & SUMMARY REPORT
+============================================================
+
+1. DATASET DIMENSIONS
+----------------------------------------
+Total Observations (Rows): 6497
+Total Features (Columns): 12
+
+2. MISSING VALUES CHECK
+----------------------------------------
+No missing values found in the dataset.
+
+3. TARGET DISTRIBUTION ('quality')
+----------------------------------------
+Quality 6: 43.65% (2836 samples)
+Quality 5: 32.91% (2138 samples)
+Quality 7: 16.61% (1079 samples)
+Quality 4: 3.32% (216 samples)
+Quality 8: 2.97% (193 samples)
+Quality 3: 0.46% (30 samples)
+Quality 9: 0.08% (5 samples)
+
+4. DEEP DESCRIPTIVE STATISTICS
+----------------------------------------
+                            mean        std      min        max  skewness   kurtosis
+fixed_acidity           7.215307   1.296434  3.80000   15.90000  1.723290   5.061161
+volatile_acidity        0.339666   0.164636  0.08000    1.58000  1.495097   2.825372
+citric_acid             0.318633   0.145318  0.00000    1.66000  0.471731   2.397239
+residual_sugar          5.443235   4.757804  0.60000   65.80000  1.435404   4.359272
+chlorides               0.056034   0.035034  0.00900    0.61100  5.399828  50.898051
+free_sulfur_dioxide    30.525319  17.749400  1.00000  289.00000  1.220066   7.906238
+total_sulfur_dioxide  115.744574  56.521855  6.00000  440.00000 -0.001177  -0.371664
+density                 0.994697   0.002999  0.98711    1.03898  0.503602   6.606067
+pH                      3.218501   0.160787  2.72000    4.01000  0.386839   0.367657
+sulphates               0.531268   0.148806  0.22000    2.00000  1.797270   8.653699
+alcohol                10.491801   1.192712  8.00000   14.90000  0.565718  -0.531687
+quality                 5.818378   0.873255  3.00000    9.00000  0.189623   0.232322
+
+Note on Skewness: > 1 or < -1 indicates a highly skewed distribution.
+Note on Kurtosis: > 3 indicates heavy tails (more outliers).
+
+5. OUTLIER ASSESSMENT (IQR METHOD)
+----------------------------------------
+                      Total Outliers  Percentage
+fixed_acidity                    357        5.49
+volatile_acidity                 377        5.80
+citric_acid                      509        7.83
+residual_sugar                   118        1.82
+chlorides                        286        4.40
+free_sulfur_dioxide               62        0.95
+total_sulfur_dioxide              10        0.15
+density                            3        0.05
+pH                                73        1.12
+sulphates                        191        2.94
+alcohol                            3        0.05
+quality                          228        3.51
+
+6. FEATURE CORRELATIONS WITH TARGET ('quality')
+----------------------------------------
+alcohol                 0.444319
+citric_acid             0.085532
+free_sulfur_dioxide     0.055463
+sulphates               0.038485
+pH                      0.019506
+residual_sugar         -0.036980
+total_sulfur_dioxide   -0.041385
+fixed_acidity          -0.076743
+chlorides              -0.200666
+volatile_acidity       -0.265699
+density                -0.305858
+
+7. HIGHLY CORRELATED FEATURE PAIRS ( > |0.6| )
+----------------------------------------
+free_sulfur_dioxide & total_sulfur_dioxide: 0.721
+density & alcohol: 0.687
+
